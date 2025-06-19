@@ -1,5 +1,6 @@
 package com.example.labb5
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckBox
@@ -56,13 +57,12 @@ class MainActivity : AppCompatActivity() {
                 totalInterest += 0.09
             }
 
-            // Если ни один чекбокс не выбран, показываем сообщение об ошибке
             if (totalInterest == 0.0) {
-                // Здесь можно добавить Toast или AlertDialog для уведомления пользователя
                 return
             }
 
             val totalAmount = amount * (1 + totalInterest)
+
             val intent = Intent(this, ResultActivity::class.java).apply {
                 putExtra("TOTAL_AMOUNT", totalAmount)
             }
