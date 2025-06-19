@@ -17,7 +17,7 @@ class ResultActivity : AppCompatActivity() {
         textViewResult = findViewById(R.id.textViewResult)
 
         val totalAmount = intent.getDoubleExtra("TOTAL_AMOUNT", 0.0)
-        textViewResult.text = "Получить = %.2f рублей".format(totalAmount)
+        textViewResult.text = "Получим = %.2f рублей".format(totalAmount)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
